@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="All_tests_except_useless_ones" thread-count="1">
+    <test name="Exclude_Hello_World_tests">
+        <!--https://stackoverflow.com/questions/12157846/how-to-exclude-class-in-testng-->
+        <groups>
+            <run>
+<!--                <exclude name="HelloWorld"/>-->
+                <exclude name="disabled"/>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="testing_kotlin"/>
+            <package name="testing"/>
+        </packages>
+
+    </test>
+</suite>
